@@ -32,7 +32,8 @@ public:
         std::cout << " done!" << std::endl;
     }
 
-    virtual void combinedSolveInit() override {
+    virtual void combinedSolveInit() override
+    {
 
         m_problemParams.set("w_fitSqrt", &m_weightFitSqrt);
         m_problemParams.set("w_regSqrt", &m_weightRegSqrt);

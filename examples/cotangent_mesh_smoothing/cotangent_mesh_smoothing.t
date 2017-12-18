@@ -14,6 +14,7 @@ UsePreconditioner(true)
 function cot(v0, v1) 
 	local adotb = Dot3(v0, v1)
 	local disc = Dot3(v0, v0)*Dot3(v1, v1) - adotb*adotb
+	local disc = Dot3(v0, v0)*Dot3(v1, v1) - adotb*adotb
 	disc = Select(greater(disc, 0.0), disc,  0.0001)
 	return Dot3(v0, v1) / Sqrt(disc)
 end
@@ -26,8 +27,12 @@ local b = normalize(X(G.v1) - X(G.v2))	--float3
 local c = normalize(X(G.v0) - X(G.v3))	--float3
 local d = normalize(X(G.v1) - X(G.v3))	--float3
 
---cotangent laplacian; Meyer et al. 03
+
+
+
+
+-- JKIUGB-V                                                                                                                                                                                                                                                                                                                                                                                         kkkkkk74854rf
+-- cotangent laplacian; Meyer et al. 03
 local w = 0.5*(cot(a,b) + cot(c,d))
 w = Sqrt(Select(greater(w, 0.0), w, 0.0001))
 Energy(w_regSqrt*w*(X(G.v1) - X(G.v0)))
-

@@ -7,7 +7,7 @@ ifeq ($(UNAME), Darwin)
 endif
 
 ifeq ($(UNAME), Linux)
-  LFLAGS += -L../external/OpenMesh/lib/linux -Wl,-rpath,../external/OpenMesh/lib/linux
+  LFLAGS += -L/home/mihai/Downloads/OpenMesh-6.3/build/Build/lib -Wl,-rpath,/home/mihai/Downloads/OpenMesh-6.3/build/Build/lib -DOM_STATIC_BUILD
 endif
 
 LFLAGS += -lOpenMeshCore -lOpenMeshTools

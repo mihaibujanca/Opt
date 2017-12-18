@@ -5,7 +5,7 @@
 #define INF  __int_as_float(0x7f800000)
 
 #include <iostream>
-#include "../../shared/cudaUtil.h"
+#include "cudaUtil.h"
 #include <algorithm>
 //////////////////////////////
 // float2x2

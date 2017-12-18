@@ -5,7 +5,7 @@ struct CombinedSolverParameters {
     bool useOpt = true;
     bool useOptLM = false;
     bool useCeres = false;
-    bool earlyOut = false;
+    bool earlyOut = true;
     unsigned int numIter = 1;
     unsigned int nonLinearIter = 3;
     unsigned int linearIter = 200;
